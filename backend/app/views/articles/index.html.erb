@@ -1,0 +1,19 @@
+<div class="w-full">
+  <%= form_tag(articles_path, method: "get", class: "flex items-center p-4 bg-white rounded-lg") do %>
+      <%= text_field_tag(:query, params[:query], class: "flex-grow p-2 text-sm text-gray-700 rounded-l-lg focus:outline-none") %>
+      <button type="submit" class="p-2 bg-blue-500 text-white rounded-r-lg">
+        Search
+      </button>
+  <% end %>
+  <ol class="mt-4 space-y-2">
+    <%@chunks.each_with_index do |chunk, index| %>
+      <li class="p-4 bg-white rounded-lg">
+        <b> <%=index +1 %>. </b>
+
+        <%=chunk.article&.name %> <b>score</b>:
+        <%=chunk.score %>
+        <p><%=chunk.attributes %></p>
+      </li>
+    <%end %>
+  </ol>
+</div>

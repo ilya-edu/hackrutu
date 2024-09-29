@@ -1,0 +1,1 @@
+json.extract! room, :id, :name, :human_need, :main_room_id, :assistant_room_id, :kind

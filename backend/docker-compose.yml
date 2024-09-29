@@ -1,0 +1,58 @@
+version: '3.4'
+x-rails-common-settings: &rails-common-settings
+  image: vchekryzhov/rutube-copilot-back:latest
+  environment:
+    RAILS_MASTER_KEY: 87c7603cd847daf5da83b8b000bd8604
+    DB_NAME: rutube_copilot
+    DB_USERNAME: postgres
+    DB_PASSWORD: postgres
+    DB_HOST: postgres
+    ENCODER_URL: encoder:5000
+    REDIS_URL: redis://redis:6379/1
+    MALLOC_ARENA_MAX: 2
+    WEB_CONCURRENCY: 0
+    GOOD_JOB_QUEUES: "llm_processing:1;relays:2;embeder:2;parsers:1"
+  depends_on:
+    - postgres
+    - encoder
+    - redis
+services:
+  rails:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    <<: *rails-common-settings
+    ports:
+      - "3035:3000"
+    volumes:
+      - storage:/rails/storage
+  good_job:
+    <<: *rails-common-settings
+    command: [ 'bundle', 'exec', 'good_job', 'start' ]
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: rutube_copilot
+    volumes:
+      - pg_data3:/var/lib/postgresql/data
+    ports:
+      - "5436:5432"
+  encoder:
+    image: vchekryzhov/rutube_copilot_encoder
+    environment:
+      MODEL_NAME: dankalin/multilingual-e5-large-hack
+    volumes:
+      - models:/usr/src/app/models
+    ports:
+      - "5002:5000"
+  redis:
+    image: redis:latest
+    volumes:
+      - redis_data:/var/lib/redis/data
+volumes:
+  pg_data3:
+  models:
+  redis_data:
+  storage:

@@ -1,0 +1,38 @@
+<div class="w-full">
+  <!-- Заголовок и подзаголовок -->
+  <div class="text-center py-6">
+    <h1 class="text-4xl font-bold text-gray-800">Загрузка новых данных</h1>
+    <p class="text-xl text-gray-600 mt-2">Загрузите новые данные в формате представленном ниже, для того что бы сеть смогла ответить на все ваши вопросы</p>
+  </div>
+  <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+      <tr>
+        <th scope="col" class="py-3 px-6">Page</th>
+        <th scope="col" class="py-3 px-6">Content</th>
+        <th scope="col" class="py-3 px-6">Title</th>
+        <th scope="col" class="py-3 px-6">Category1</th>
+        <th scope="col" class="py-3 px-6">Category2</th>
+      </tr>
+
+      </thead>
+      <tbody>
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <td class="py-4 px-6">https://rutube.ru/info/agreement/</td>
+        <td class="py-4 px-6">Пункты соглашения</td>
+        <td class="py-4 px-6">Генеральное пользовательское соглашение</td>
+        <td class="py-4 px-6">cat 1</td>
+        <td class="py-4 px-6">cat 2</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Форма для загрузки файла -->
+  <!-- Форма для загрузки файла -->
+  <form action="<%=articles_path %>" method="post" enctype="multipart/form-data" class="flex items-center p-4 bg-white rounded-lg">
+    <label for="file_upload" class="block text-sm font-medium text-gray-700">Выбери файл:</label>
+    <input type="file" id="file_upload" name="file_upload" class="ml-4 flex-1 block w-full rounded-md border-gray-300  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+    <input type="submit" value="Загрузить" class="ml-4 px-4 py-2 border border-transparent rounded-md text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+  </form>
+</div>
