@@ -1,7 +1,7 @@
 # rutube-copilot Помощник 
 
 ### архитектура решения
-![img.png](pics/pic2.png)
+![img.png](../pics/pic2.png)
 
 ### Запуск
 ```bash
