@@ -6,7 +6,7 @@
 **[ml](https://github.com/ilya-edu/hackrutu/tree/master/ml)** - описание модуля ML (данные, модели, обучение)<br>
 **[backend](https://github.com/ilya-edu/hackrutu/tree/master/backend)** - бэкенд системы<br>
 **[tgbot](https://github.com/ilya-edu/hackrutu/tree/master/tgbot)** - Telegram-бот для общения пользователя с оператором тех.поддержки<br>
-**[frontend](https://github.com/ilya-edu/hackrutu/tree/master/tgbot)** - фронтенд системы, web-приложение, через которое оператор общается с пользователями и через котрое пользователь может задавать вопросы (в дополнении к Telegram-боту)<br>
+**[frontend](https://github.com/ilya-edu/hackrutu/tree/master/frontend)** - фронтенд системы, web-приложение, через которое оператор общается с пользователями и через котрое пользователь может задавать вопросы (в дополнении к Telegram-боту)<br>
 
 ## Ссылки на демо
 
