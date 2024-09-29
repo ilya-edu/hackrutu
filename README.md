@@ -21,3 +21,4 @@ https://rutube-copilot.kovalev.team
 ![](pics/pic1.png)
 
 ## Пример работы системы можете посмотреть по ссылке
+[RUTUBECopilot](https://rutube.ru/video/private/2221299d30166578f8e783163333217d/?p=amCXX2slUA3_xlN4zHnbSw)
