@@ -3,9 +3,9 @@
 **RUTUBECopilot** - Интеллектуальный помощник оператора службы поддержки
 Описания проектов находятся в корне папок, в проектах, в файлах Readme.md.
 
-**[ml](https://github.com/ilya-edu/hackrutu/tree/master/ml)** - описание модуля ML (данные, модели, обучение)
-**[backend](https://github.com/ilya-edu/hackrutu/tree/master/backend)** - бэкенд системы (подробным описание в readme)
-**[tgbot](https://github.com/ilya-edu/hackrutu/tree/master/tgbot)** - Telegram-бот для общения пользователя с оператором тех.поддержки
+**[ml](https://github.com/ilya-edu/hackrutu/tree/master/ml)** - описание модуля ML (данные, модели, обучение)<br>
+**[backend](https://github.com/ilya-edu/hackrutu/tree/master/backend)** - бэкенд системы (подробным описание в readme)<br>
+**[tgbot](https://github.com/ilya-edu/hackrutu/tree/master/tgbot)** - Telegram-бот для общения пользователя с оператором тех.поддержки<br>
 
 ## Ссылки на демо
 
